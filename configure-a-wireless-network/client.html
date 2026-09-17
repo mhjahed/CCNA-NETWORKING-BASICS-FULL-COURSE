@@ -1,0 +1,1254 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 1rem;
+      }
+      ol,
+      ul {
+        margin-bottom: 0in;
+      }
+      table {
+        margin-top: 1rem;
+        border: 1px solid gray;
+        width: 7in;
+        border-collapse: collapse;
+      }
+
+      table > thead > tr > .openTableTextBox__table-header-data {
+        text-align: center;
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0in;
+        text-align: center;
+        line-height: 115%;
+        page-break-after: avoid;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        background: #dbe5f1;
+        padding: 0.5rem;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .openTextBox__textArea-container {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 50%;
+      }
+      .openTableTextBox__fieldset {
+        padding: 5px;
+      }
+      td {
+        margin-top: 3pt;
+        margin-right: 0in;
+        margin-bottom: 3pt;
+        margin-left: 0in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 98.85pt;
+        border: solid windowtext 1pt;
+        border-top: none;
+        padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+      }
+      textarea {
+        width: 100%;
+      }
+      .answergray {
+        padding: 0.2rem;
+      }
+
+      .openTableTextBox__widget {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+      }
+
+      .show-answer,
+      .hide-answer {
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border: 0px;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .openTextBoxController__button-container {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .openTextBoxController__button-container .btn-text {
+        margin: 10px;
+      }
+
+      .btn-text {
+        border: 0px;
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border-radius: 0;
+        cursor: pointer;
+      }
+
+      .u-display-none {
+        display: none;
+      }
+      .openTextBox__postText, openTableTextBox__postText {
+        margin-top: 0.5rem;
+      }
+      .edit-comment {
+        display: none;
+      }
+      .js-heading-inner {
+        display: none;
+      }
+      .block__title-inner,
+      .article__title-inner {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+      }
+      h2{
+        font-size: 1.25em;
+      }
+      h3{
+        font-size: 1.125em;
+      }
+      .table
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: solid windowtext 1pt;
+      }
+      table tbody tr th, table thead tr th{
+        border: solid windowtext 1pt;
+        background-color: #d6d8dc;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .command-output > .table-inner > .table-wrapper > .table-widget > table,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > td,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: none !important;
+        text-align: right !important;
+      }
+      .simple-table > .table-inner > .table-wrapper{
+        margin-left: 1.5rem;
+      }
+      .openTextBox__widget {
+        margin-left: 1.5rem;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      .answergray {
+        background-color: #ccc;
+      }
+      .openTableTextBox__widget > .answergray {
+        background-color: #fff !important;
+      }
+      li > ul,ol > li{
+        margin-left: 0px !important;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      
+      .component__title{
+        font-family: inherit;
+        font-size: 1.65em;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .component__body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .accessibility-completion-indicator{
+        display: none;
+      }
+
+      .check__hidden {
+        display: none;
+      }
+
+      .check__button {
+        border: none;
+        border-radius: 6px !important;
+        background-color: #6abf4b;
+        color: #fff;
+        min-width: 100px;
+        margin: 0.625rem 0;
+        padding: 0.7rem;
+      }
+
+      .check__widget .check__solution .DevConfigGray {
+        background-color: rgb(214,216,220);
+        font-weight: bold;
+      }
+
+      .check-inner .check__widget .check__solution .DevConfigs {
+        margin: 0px;
+        line-height: 115%;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .check__solution  {
+        line-height: 1.5;
+      }
+      .mcq__inner .mcq__widget .mcq__widget-inner {
+        margin-block: 1rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item {
+        display: flex;
+        gap: 0.2rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item .mcq__item-label .mcq__item-text .screenReader-position-text{
+        display: none;
+      }
+      .opentabletextbox-inner .opentabletextBox__widget .openTableTextBox__answerText.answergray {
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox{
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox img{
+        margin-block: 1rem;
+        margin-left: initial;
+      }
+      .component__content .component__body-inner .pageTracer-h4-title-hide {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        font-size: 0px;
+        color: rgb(var(--neutral-2));
+        font-weight: normal;
+      }
+      .table-inner .table__widget table tr.TableHeading th, .table-inner .table__widget table tr.TableHeading td, .table-inner .table__widget table tr td.TableHeading, .opentabletextbox-table thead tr.TableHeading th, .opentabletextbox-table tbody tr.TableHeading td, .opentabletextbox-table tbody tr td.TableHeading {
+        background-color: #d6d8dc;
+        text-align: center;
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .CMD, .component__content .component__body-inner .CMDOutput, .component__content .component__body-inner .CMDOutput__table{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        margin-inline-start: 30px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      [dir="rtl"] .component__content .component__body-inner .CMDOutput__table span {
+        direction: ltr;
+        display: inline-block;
+      }
+      .openTextBox__inner .openTextBox__widget .CMD, .openTextBox__inner .openTextBox__widget .CMDOutput{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .openTextBox__inner .openTextBox__widget .DnTbold, .openTextBox__inner .openTextBox__widget .BodyTextL25Bold, .component__content .component__body-inner .BodyTextL25Bold, .component__content .component__body-inner .DnTbold, .table-inner .table__widget table tr .DnTbold {
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .SubStepNum {
+        text-indent: -25.5px;
+        margin-inline-start: 50px;
+      }
+      .component__content .component__body-inner .BodyTextL50 {
+        margin-inline-start: 30px;
+      }
+      .component__content .component__body-inner .Bulletlevel1 {
+        text-indent: -19px;
+        margin-inline-start: 48px;
+      }
+      .component__content .component__body-inner .Bulletlevel2 {
+          text-indent: -19px;
+          margin-inline-start: 72px;
+      }
+      .openTextBox__inner .openTextBox__widget .ReflectionQ, .component__content .component__body-inner .SubStepAlpha {
+          text-indent: -25.5px;
+          margin-inline-start: 30px;
+      }
+    </style>
+
+</head><body><!---->
+            <div class="article 07eb34bf-a6c7-47ca-bede-23f53751490c remove-padding-top remove-padding-bottom is-complete ">
+                <div class="article__inner">
+                <div class=" no-adaptive-scroll">
+                    <!--?lit$2056706437$-->
+                        <div class=""> 
+                            <base-view type="article" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="light" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="article__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="article__header ">
+          <div class="article__header-inner ">
+            <!--?lit$2056706437$-->
+      <div class="article__title ">
+        <!--?lit$2056706437$--><heading-view aria-hidden="true" id="07eb34bf-a6c7-47ca-bede-23f53751490c-heading-view" headingtitle="Packet Tracer - Configure a Wireless Router and Clients" modelid="07eb34bf-a6c7-47ca-bede-23f53751490c" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="light" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="js-heading is-complete">
+        <div class="js-heading-inner" role="heading" id="article-heading" aria-level="2">
+        <span class="aria-label"> <!--?lit$2056706437$-->Complete &nbsp;<!--?lit$2056706437$-->Packet Tracer - Configure a Wireless Router and Clients</span>
+        </div>
+      </div>
+    <style id="customCSS">.reduce-margin-top {
+margin-top: calc(4em / 2) !important;
+}
+
+.remove-top-margin {
+margin-top: 0 !important;
+}
+
+.reduce-padding-top {
+padding-top: calc(4em / 2) !important;
+}
+
+.remove-top-padding {
+padding-top: 0 !important;
+}
+
+.increase-margin-top {
+margin-top: calc(4em * 2) !important;
+}
+
+.increase-padding-top {
+padding-top: calc(4em * 2) !important;
+}
+
+.reduce-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-margin {
+margin-bottom: 0 !important;
+}
+
+.background-color-blue {
+background-color: #0d274d;
+}
+
+.background-color-gray {
+background-color: rgb(var(--background-color-2));
+}
+
+.reduce-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-padding {
+padding-bottom: 0 !important;
+}
+
+.background-color-white {
+background-color: rgb(var(--background-color-3));
+}
+
+.increase-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.increase-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.graphic-component-aside-content {
+display: flex;
+flex-direction: row-reverse;
+}</style></heading-view>
+        <div tabindex="0" role="heading" class="article__title-inner " aria-level="2">
+          <span class="accessibility-completion-indicator"><!--?lit$2056706437$-->Complete </span>
+          <!--?lit$2056706437$-->Packet Tracer - Configure a Wireless Router and Clients
+        </div>
+      </div>
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+          </div>
+        </div>
+      </div>
+    <style id="customCSS">.reduce-margin-top {
+margin-top: calc(4em / 2) !important;
+}
+
+.remove-top-margin {
+margin-top: 0 !important;
+}
+
+.reduce-padding-top {
+padding-top: calc(4em / 2) !important;
+}
+
+.remove-top-padding {
+padding-top: 0 !important;
+}
+
+.increase-margin-top {
+margin-top: calc(4em * 2) !important;
+}
+
+.increase-padding-top {
+padding-top: calc(4em * 2) !important;
+}
+
+.reduce-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-margin {
+margin-bottom: 0 !important;
+}
+
+.background-color-blue {
+background-color: #0d274d;
+}
+
+.background-color-gray {
+background-color: rgb(var(--background-color-2));
+}
+
+.reduce-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-padding {
+padding-bottom: 0 !important;
+}
+
+.background-color-white {
+background-color: rgb(var(--background-color-3));
+}
+
+.increase-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.increase-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.graphic-component-aside-content {
+display: flex;
+flex-direction: row-reverse;
+}</style></base-view>
+                            <div class="block__container " style="">
+                                <!--?lit$2056706437$--><!---->
+                                    <block-view modelid="55fad551-b02c-490d-9242-f75976c5684a" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="light" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 50%;"><!---->
+                
+                <div data-socialgoodpulse-id="55fad551-b02c-490d-9242-f75976c5684a" class="55fad551-b02c-490d-9242-f75976c5684a block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="55fad551-b02c-490d-9242-f75976c5684a" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="light" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+          </div>
+        </div>
+      </div>
+    <style id="customCSS">.reduce-margin-top {
+margin-top: calc(4em / 2) !important;
+}
+
+.remove-top-margin {
+margin-top: 0 !important;
+}
+
+.reduce-padding-top {
+padding-top: calc(4em / 2) !important;
+}
+
+.remove-top-padding {
+padding-top: 0 !important;
+}
+
+.increase-margin-top {
+margin-top: calc(4em * 2) !important;
+}
+
+.increase-padding-top {
+padding-top: calc(4em * 2) !important;
+}
+
+.reduce-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-margin {
+margin-bottom: 0 !important;
+}
+
+.background-color-blue {
+background-color: #0d274d;
+}
+
+.background-color-gray {
+background-color: rgb(var(--background-color-2));
+}
+
+.reduce-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-padding {
+padding-bottom: 0 !important;
+}
+
+.background-color-white {
+background-color: rgb(var(--background-color-3));
+}
+
+.increase-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.increase-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.graphic-component-aside-content {
+display: flex;
+flex-direction: row-reverse;
+}</style></base-view>
+                        <div class="component__container">                            
+                                <!--?lit$2056706437$--><!----><text-view modelid="b69f6faf-516b-4800-9a26-260f506c37af" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="light" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="b69f6faf-516b-4800-9a26-260f506c37af" class="component text b69f6faf-516b-4800-9a26-260f506c37af  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="light" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$2056706437$--><h2>Objectives</h2> <p class="BodyTextL25Bold">Part 1: Connect the Devices</p> <p class="BodyTextL25Bold">Part 2: Configure the Wireless Router</p> <p class="BodyTextL25Bold">Part 3: Configure IP Addressing and Test Connectivity</p> <h2>Background / Scenario</h2> <p class="BodyTextL25">Your friend, Natsumi, heard that you are studying networking. She asked you to come over and help her connect her new home to the cable TV network. You need to connect the correct cables to the correct devices, connect devices to a home wireless router, and configure the router to provide IP addresses to network clients. Natsumi also wants you to setup a wireless LAN for her home network, so you will configure that as well. You are confident that this will be an easy process and the network will be setup in no time!</p> <h2>Instructions</h2> <h2>Part 1: Connect the Devices</h2> <p class="BodyTextL25">The work area shows the interior of your friend’s house. Scroll the window to get a sense of the layout of the house and the location of the devices. In this part, you will connect all the labeled devices.</p> <h3>Step 1: Connect the coaxial cables.</h3> <p class="BodyTextL25">Natsumi's cable company delivers internet and video services to her home through a coaxial cable. The cable is connected to an outlet in her home. A splitter device separates the internet data service from the video service. This enables the two services to be connected to the appropriate devices. You will connect the internet service to the cable modem, and the video service to the television.</p> <p class="SubStepAlpha">a.<span>&nbsp;&nbsp;</span>In Network Components, click <b>Connections</b> (the lightning bolt).</p> <p class="SubStepAlpha">b.<span>&nbsp;&nbsp;</span>Locate and click the icon for the <b>Coaxial</b> cable. It is the blue zigzag icon.</p> <p class="SubStepAlpha">c.<span>&nbsp;&nbsp;</span>Click the <b>Cable Splitter</b> and select the <b>Coaxial1</b> port.</p> <p class="SubStepAlpha">d.<span>&nbsp;&nbsp;</span>Click the <b>Cable Modem</b> and select <b>Port 0</b>.</p> <p class="SubStepAlpha">e.<span>&nbsp;&nbsp;</span>Repeat the previous steps to connect <b>Coaxial2</b> on the <b>Cable Splitter</b> to <b>Port 0 </b>on the <b>TV</b>.</p> <p class="SubStepAlpha">f.<span>&nbsp;&nbsp;&nbsp;</span>Click the <b>TV</b>, and then click <b>ON</b> for <b>Status</b>. If your connections are correct, you should see an image appear that represents a TV program.</p> <h3>Step 2: Connect the network cables.</h3> <p class="BodyTextL25">There are two PCs in Natsumi’s house. They don’t have wireless LAN adapters, so they will be connected with Ethernet cables. The home wireless router is the center of the network. It enables devices that are configured on the home network to communicate with each other and the internet. The router includes a network switch that accepts wired connections for up to four hosts. You will connect the PCs to these ports.</p> <p class="BodyTextL25">For the <b>Home Wireless Router</b> to access the internet over the cable TV provider network, the cable modem must be connected to the home wireless router internet port. This is done with a copper straight-through cable. </p> <p class="SubStepAlpha">a.<span>&nbsp;&nbsp;</span>Click <b>Connections</b>, and then <b>Copper Straight-Through</b> cable. It looks like a solid black line. </p> <p class="SubStepAlpha">b.<span>&nbsp;&nbsp;</span>Connect<b> Port 1</b> on the <b>Cable Modem</b> to the <b>Internet</b> port of the<b> Home Wireless Router</b>. </p> <p class="SubStepAlpha">c.<span>&nbsp;&nbsp;</span>Click the <b>Office PC</b> and connect the cable to the <b>FastEthernet0</b> port. Locate the <b>Home Wireless Router</b> and click it. Connect the other end of the cable to the <b>GigabitEthernet 1</b> port to complete the connection.</p> <p class="SubStepAlpha">d.<span>&nbsp;&nbsp;</span>Repeat the previous steps to connect the <b>Bedroom PC</b> to the <b>GigabitEthernet 2</b> port on the <b>Home Wireless Router</b>. </p> <p class="BodyTextL25">The wired home network is now fully connected to the internet through the cable TV provider network.</p> <h2>Part 2: Configure the Wireless Router</h2> <p class="BodyTextL25">Most home wireless routers are configured by using a graphical user interface (GUI) that is accessed through your computer's web browser. In this part, you will access the home wireless router through the browser on the <b>Office PC</b> and configure Natsumi’s home network.</p> <h3>Step 1: Access the home wireless router GUI.</h3> <p class="SubStepAlpha">a.<span>&nbsp;&nbsp;</span>Click <b>Office PC</b> &gt; <b>Desktop</b> tab, and then <b>IP Configuration</b>.</p> <p class="SubStepAlpha">b.<span>&nbsp;&nbsp;</span>Click <b>DHCP</b>. DHCP will automatically configure the <b>Office PC</b> to be on the same IP network as the <b>Home Wireless Router</b>.</p> <p class="SubStepAlpha">c.<span>&nbsp;&nbsp;</span>After a brief delay, the values for the <b>IP Configuration</b> should automatically update. The IPv4 address should start with the number 192. If it does not, click <b>Fast Forward Time</b>, which is just below the network topology in the lower left-hand corner. This will speed up the simulation of DHCP.</p> <p class="SubStepAlpha">d.<span>&nbsp;&nbsp;</span>Make note of the address for the default gateway. The default gateway is the device that provides devices on the home network with access to outside networks, such as the internet. In this case, the default gateway address is the address of the <b>Home Wireless Router</b>.</p> <p class="SubStepAlpha">e.<span>&nbsp;&nbsp;</span>Keeping the <b>Office PC</b> window open, close the <b>IP Configuration</b> window, and then click <b>Web Browser</b>. Enter the IP address of the <b>Home Wireless Router</b> (the default gateway address) into the <b>URL</b> box and click <b>Go</b>.</p> <p class="SubStepAlpha">f.<span>&nbsp;&nbsp;&nbsp;</span>Newly installed home routers are configured with default credentials. Enter <b>admin</b> for both the <b>User Name</b> and <b>Password</b>. You should now see the GUI for the <b>Home Wireless Router </b>appear and are ready to configure Natsumi’s network. Adjust the window size, as necessary, to see more of the interface. </p> <p class="BodyTextL50"><b>Note</b>: Default passwords on real-world devices should be changed immediately because it is widely known, including threat actors.</p> <h3>Step 2: Configure basic settings.</h3> <p class="BodyTextL25">In this step, you will configure a new username and password for the wireless router and limit the number of IP addresses that DHCP will issue to host that are connected to the network. </p> <p class="BodyTextL25">Natsumi only has a few devices to that will connect the network, and she will not have a lot of friends visiting. She thinks that no more than 10 devices would connect to her network at any one time. You decide to lower the number of users to 10. Your friend lives in a densely populated part of town, so it is possible that many people could see her wireless network.</p> <p class="SubStepAlpha">a.<span>&nbsp;&nbsp;</span>You are currently viewing configuration options under the <b>Setup</b> tab. Locate the <b>Network Setup</b> area. This is where you can configure the router’s DHCP server settings. Locate the <b>Maximum Number of Users</b> field, enter <b>10</b>. Scroll down to the bottom of the page and click <b>Save Settings</b>. You must save settings on every page of the GUI that you make changes. </p> <p class="BodyTextL50"><b>Note</b>: It is possible that you will lose your connection to the router. Click <b>Go</b> in the web browser to reload the GUI page. You may need to close the <b>Web Browser</b>, click <b>IP Configuration</b>, and toggle between <b>DHCP</b> and <b>Static</b> to refresh the IP addressing for <b>Office PC</b>. Then verify the <b>Office PC</b> has an IP address configuration that starts with 192, open the <b>Web Browser</b> again, enter the router's IP address, and re-authenticate with <b>admin</b> as the default credentials.</p> <p class="SubStepAlpha">b.<span>&nbsp;&nbsp;</span>Click the <b>Administration</b> tab. Here, you can change the default <b>admin</b> password. Enter and confirm <b>MyPassword1!</b> as the new password. Scroll to the bottom of the page and click <b>Save Settings</b>.</p> <p class="BodyTextL50">You will be prompted to login again. Enter <b>admin</b> as the User Name and <b>MyPassword1!</b> as the new password, and the click <b>Continue</b>.</p> <h3>Step 3: Configure a wireless LAN. </h3> <p>At this point, you are ready to configure Natsumi's wireless network so that she can connect her wireless devices to the internet over Wi-Fi.</p> <p class="SubStepAlpha">a.<span>&nbsp;&nbsp;</span>Scroll back to the top of the window, and then click the <b>Wireless</b> tab.</p> <p class="SubStepAlpha">b.<span>&nbsp;&nbsp;</span>For the <b>2.4 GHz</b> network, click <b>Enable</b> to activate the network radio. </p> <p class="SubStepAlpha">c.<span>&nbsp;&nbsp;</span>Change the <b>Network Name (SSID) </b>from <b>Default</b> to <b>MyHome</b>. When people look for Wi-Fi networks to connect to, they will see this network name. The network name can be hidden, but this can make it a little harder for guests to connect to the network. Scroll to the bottom of the page and click <b>Save Settings</b>.</p> <p class="SubStepAlpha">d.<span>&nbsp;&nbsp;</span>Now you will configure security on the <b>MyHome</b> network. This will prevent unauthorized people from connecting to the wireless network. Scroll back to the top of the window, and then click the <b>Wireless Security</b> under the <b>Wireless</b> tab.</p> <p class="SubStepAlpha">e.<span>&nbsp;&nbsp;</span>Notice that security is currently disabled on all three wireless networks. You are only using the <b>2.4 GHz</b> network. Click the dropdown menu for the <b>2.4 GHz</b> network and select <b>WPA2 Personal</b>. This is the strongest security that this router offers for wireless networks.</p> <p class="SubStepAlpha">f.<span>&nbsp;&nbsp;&nbsp;</span>More settings are revealed. WPA2 Personal requires a passphrase that must be entered by anyone who wants to connect to the wireless network. Enter <b>MyPassPhrase1!</b> as the <b>Passphrase</b>. Note that capitalization is important.</p> <p class="SubStepAlpha">g.<span>&nbsp;&nbsp;</span>Scroll to the bottom of the page and click <b>Save Settings</b>, and then close the <b>Web Browser</b> for the Office PC.</p> <h2>Part 3: Configure IP Addressing and Test Connectivity</h2> <p class="BodyTextL25">Now that the router is configured, in this part you will configure IP addressing for the PCs and laptop and verify that they can connect to the internet.</p> <h3>Step 1: Connect the laptop to the wireless network.</h3> <p class="SubStepAlpha">a.<span>&nbsp;&nbsp;</span>Click the <b>Laptop</b> in the living room, and then the <b>Desktop</b> tab &gt; <b>PC Wireless</b>.</p> <p class="SubStepAlpha">b.<span>&nbsp;&nbsp;</span>Click the <b>Connect</b> tab. After a short delay you should the wireless network that you configured previously appear in the list of wireless network names. </p> <p class="SubStepAlpha">c.<span>&nbsp;&nbsp;</span>Click the name of the network that you created, and then click the <b>Connect</b> button.</p> <p class="SubStepAlpha">d.<span>&nbsp;&nbsp;</span>Enter the passphrase that you configured early for the wireless network in the <b>Pre-shared Key</b> field, and then click <b>Connect</b>. </p> <p class="SubStepAlpha">e.<span>&nbsp;&nbsp;</span>Click the <b>Link Information</b> tab. You should see the message: <b>You have successfully connected to the access point</b>.</p> <p class="SubStepAlpha">f.<span>&nbsp;&nbsp;&nbsp;</span>Click the <b>More Information</b> button to see details about the connection. If the IP address does not begin with <b>192</b>, click the <b>Fast Forward Time</b> several times to speed up the simulation.</p> <p class="SubStepAlpha">g.<span>&nbsp;&nbsp;</span>Close the <b>PC Wireless</b> app and open the <b>Web Browser</b>. Verify that the <b>Laptop</b> can now connect to <b>skillsforall.srv</b>, clicking <b>Fast Forward Time</b> until the page loads. This verifies that the <b>Laptop</b> has internet connectivity.</p> <h3>Step 2: Test connectivity from the Office PC.</h3> <p class="BodyTextL25">You know that the Office PC can connect to the network because you used it to configure the router. However, can it also access the internet? If it can, then you will know that the wired network is properly connected and configured.</p> <p class="SubStepAlpha">a.<span>&nbsp;&nbsp;</span>Click <b>Office PC</b> &gt; <b>Desktop</b> tab &gt; <b>Web Browser</b>.</p> <p class="SubStepAlpha">b.<span>&nbsp;&nbsp;</span>Enter <b>skillsforall.srv</b> and click <b>Go</b>. After a brief delay, you should see the webpage appear. If necessary, click <b>Fast Forward Time</b> several times to speed up the convergence. </p> <p class="BodyTextL50">Loading an external website verifies that internet connectivity for the <b>Office PC</b>.</p> <h3>Step 3: Configure the bedroom PC.</h3> <p class="SubStepAlpha">a.<span>&nbsp;&nbsp;</span>For the <b>Bedroom PC</b>, open <b>IP Configuration</b> and set it to <b>DHCP</b>. Verify that the Bedroom PC received an IP address that begins with <b>192</b>.</p> <p class="SubStepAlpha">b.<span>&nbsp;&nbsp;</span>Close the <b>IP Configuration</b> window and open the <b>Web Browser</b>. Verify that the <b>Bedroom PC</b> can now connect to <b>skillsforall.srv</b>, clicking <b>Fast Forward Time</b> until the page loads. This verifies that the <b>Bedroom PC</b> has internet connectivity.</p> <p class="BodyTextL25">You have now completed connecting network devices, configuring the router and wireless LAN, and configuring hosts to connect to the network. All devices should be able to connect to the internet. Your job is done and Natsumi has offered to cook dinner for you as a reward for your help.</p></div>
+        </div>
+      </div>
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+          </div>
+        </div>
+      </div>
+    <style id="customCSS">.reduce-margin-top {
+margin-top: calc(4em / 2) !important;
+}
+
+.remove-top-margin {
+margin-top: 0 !important;
+}
+
+.reduce-padding-top {
+padding-top: calc(4em / 2) !important;
+}
+
+.remove-top-padding {
+padding-top: 0 !important;
+}
+
+.increase-margin-top {
+margin-top: calc(4em * 2) !important;
+}
+
+.increase-padding-top {
+padding-top: calc(4em * 2) !important;
+}
+
+.reduce-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-margin {
+margin-bottom: 0 !important;
+}
+
+.background-color-blue {
+background-color: #0d274d;
+}
+
+.background-color-gray {
+background-color: rgb(var(--background-color-2));
+}
+
+.reduce-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-padding {
+padding-bottom: 0 !important;
+}
+
+.background-color-white {
+background-color: rgb(var(--background-color-3));
+}
+
+.increase-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.increase-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.graphic-component-aside-content {
+display: flex;
+flex-direction: row-reverse;
+}</style></base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        <style id="customCSS">.reduce-margin-top {
+margin-top: calc(4em / 2) !important;
+}
+
+.remove-top-margin {
+margin-top: 0 !important;
+}
+
+.reduce-padding-top {
+padding-top: calc(4em / 2) !important;
+}
+
+.remove-top-padding {
+padding-top: 0 !important;
+}
+
+.increase-margin-top {
+margin-top: calc(4em * 2) !important;
+}
+
+.increase-padding-top {
+padding-top: calc(4em * 2) !important;
+}
+
+.reduce-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-margin {
+margin-bottom: 0 !important;
+}
+
+.background-color-blue {
+background-color: #0d274d;
+}
+
+.background-color-gray {
+background-color: rgb(var(--background-color-2));
+}
+
+.reduce-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-padding {
+padding-bottom: 0 !important;
+}
+
+.background-color-white {
+background-color: rgb(var(--background-color-3));
+}
+
+.increase-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.increase-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.graphic-component-aside-content {
+display: flex;
+flex-direction: row-reverse;
+}</style></text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            <style id="customCSS">.reduce-margin-top {
+margin-top: calc(4em / 2) !important;
+}
+
+.remove-top-margin {
+margin-top: 0 !important;
+}
+
+.reduce-padding-top {
+padding-top: calc(4em / 2) !important;
+}
+
+.remove-top-padding {
+padding-top: 0 !important;
+}
+
+.increase-margin-top {
+margin-top: calc(4em * 2) !important;
+}
+
+.increase-padding-top {
+padding-top: calc(4em * 2) !important;
+}
+
+.reduce-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-margin {
+margin-bottom: 0 !important;
+}
+
+.background-color-blue {
+background-color: #0d274d;
+}
+
+.background-color-gray {
+background-color: rgb(var(--background-color-2));
+}
+
+.reduce-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-padding {
+padding-bottom: 0 !important;
+}
+
+.background-color-white {
+background-color: rgb(var(--background-color-3));
+}
+
+.increase-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.increase-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.graphic-component-aside-content {
+display: flex;
+flex-direction: row-reverse;
+}</style></block-view>
+                                <!----><!---->
+                                    <block-view modelid="68f101fa-5979-4c77-8a57-e4e9166909a4" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="light" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 50%;"><!---->
+                
+                <div data-socialgoodpulse-id="68f101fa-5979-4c77-8a57-e4e9166909a4" class="68f101fa-5979-4c77-8a57-e4e9166909a4 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="68f101fa-5979-4c77-8a57-e4e9166909a4" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="light" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+          </div>
+        </div>
+      </div>
+    <style id="customCSS">.reduce-margin-top {
+margin-top: calc(4em / 2) !important;
+}
+
+.remove-top-margin {
+margin-top: 0 !important;
+}
+
+.reduce-padding-top {
+padding-top: calc(4em / 2) !important;
+}
+
+.remove-top-padding {
+padding-top: 0 !important;
+}
+
+.increase-margin-top {
+margin-top: calc(4em * 2) !important;
+}
+
+.increase-padding-top {
+padding-top: calc(4em * 2) !important;
+}
+
+.reduce-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-margin {
+margin-bottom: 0 !important;
+}
+
+.background-color-blue {
+background-color: #0d274d;
+}
+
+.background-color-gray {
+background-color: rgb(var(--background-color-2));
+}
+
+.reduce-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-padding {
+padding-bottom: 0 !important;
+}
+
+.background-color-white {
+background-color: rgb(var(--background-color-3));
+}
+
+.increase-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.increase-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.graphic-component-aside-content {
+display: flex;
+flex-direction: row-reverse;
+}</style></base-view>
+                        <div class="component__container">                            
+                                <!--?lit$2056706437$--><!----><text-view modelid="34a54a49-5db4-47b3-8c81-95743bad49b7" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="light" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="34a54a49-5db4-47b3-8c81-95743bad49b7" class="component text 34a54a49-5db4-47b3-8c81-95743bad49b7  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="light" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$2056706437$--><span> <hr><span style="padding-right:5px;float:left;font-family:arial;font-size:12px;">© 2017 - 2022 Cisco and/or its affiliates. All rights reserved. Cisco Public</span> </span></div>
+        </div>
+      </div>
+            <!--?lit$2056706437$-->
+            <!--?lit$2056706437$-->
+          </div>
+        </div>
+      </div>
+    <style id="customCSS">.reduce-margin-top {
+margin-top: calc(4em / 2) !important;
+}
+
+.remove-top-margin {
+margin-top: 0 !important;
+}
+
+.reduce-padding-top {
+padding-top: calc(4em / 2) !important;
+}
+
+.remove-top-padding {
+padding-top: 0 !important;
+}
+
+.increase-margin-top {
+margin-top: calc(4em * 2) !important;
+}
+
+.increase-padding-top {
+padding-top: calc(4em * 2) !important;
+}
+
+.reduce-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-margin {
+margin-bottom: 0 !important;
+}
+
+.background-color-blue {
+background-color: #0d274d;
+}
+
+.background-color-gray {
+background-color: rgb(var(--background-color-2));
+}
+
+.reduce-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-padding {
+padding-bottom: 0 !important;
+}
+
+.background-color-white {
+background-color: rgb(var(--background-color-3));
+}
+
+.increase-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.increase-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.graphic-component-aside-content {
+display: flex;
+flex-direction: row-reverse;
+}</style></base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        <style id="customCSS">.reduce-margin-top {
+margin-top: calc(4em / 2) !important;
+}
+
+.remove-top-margin {
+margin-top: 0 !important;
+}
+
+.reduce-padding-top {
+padding-top: calc(4em / 2) !important;
+}
+
+.remove-top-padding {
+padding-top: 0 !important;
+}
+
+.increase-margin-top {
+margin-top: calc(4em * 2) !important;
+}
+
+.increase-padding-top {
+padding-top: calc(4em * 2) !important;
+}
+
+.reduce-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-margin {
+margin-bottom: 0 !important;
+}
+
+.background-color-blue {
+background-color: #0d274d;
+}
+
+.background-color-gray {
+background-color: rgb(var(--background-color-2));
+}
+
+.reduce-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-padding {
+padding-bottom: 0 !important;
+}
+
+.background-color-white {
+background-color: rgb(var(--background-color-3));
+}
+
+.increase-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.increase-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.graphic-component-aside-content {
+display: flex;
+flex-direction: row-reverse;
+}</style></text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            <style id="customCSS">.reduce-margin-top {
+margin-top: calc(4em / 2) !important;
+}
+
+.remove-top-margin {
+margin-top: 0 !important;
+}
+
+.reduce-padding-top {
+padding-top: calc(4em / 2) !important;
+}
+
+.remove-top-padding {
+padding-top: 0 !important;
+}
+
+.increase-margin-top {
+margin-top: calc(4em * 2) !important;
+}
+
+.increase-padding-top {
+padding-top: calc(4em * 2) !important;
+}
+
+.reduce-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-margin {
+margin-bottom: 0 !important;
+}
+
+.background-color-blue {
+background-color: #0d274d;
+}
+
+.background-color-gray {
+background-color: rgb(var(--background-color-2));
+}
+
+.reduce-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-padding {
+padding-bottom: 0 !important;
+}
+
+.background-color-white {
+background-color: rgb(var(--background-color-3));
+}
+
+.increase-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.increase-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.graphic-component-aside-content {
+display: flex;
+flex-direction: row-reverse;
+}</style></block-view>
+                                <!---->
+                            </div>
+                        </div>
+                        <!--?lit$2056706437$-->
+                    </div>
+                </div>
+            </div>
+        <style id="customCSS">.reduce-margin-top {
+margin-top: calc(4em / 2) !important;
+}
+
+.remove-top-margin {
+margin-top: 0 !important;
+}
+
+.reduce-padding-top {
+padding-top: calc(4em / 2) !important;
+}
+
+.remove-top-padding {
+padding-top: 0 !important;
+}
+
+.increase-margin-top {
+margin-top: calc(4em * 2) !important;
+}
+
+.increase-padding-top {
+padding-top: calc(4em * 2) !important;
+}
+
+.reduce-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-margin {
+margin-bottom: 0 !important;
+}
+
+.background-color-blue {
+background-color: #0d274d;
+}
+
+.background-color-gray {
+background-color: rgb(var(--background-color-2));
+}
+
+.reduce-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.remove-bottom-padding {
+padding-bottom: 0 !important;
+}
+
+.background-color-white {
+background-color: rgb(var(--background-color-3));
+}
+
+.increase-margin-bottom {
+margin-bottom: calc(4em / 2) !important;
+}
+
+.increase-padding-bottom {
+padding-bottom: calc(4em / 2) !important;
+}
+
+.graphic-component-aside-content {
+display: flex;
+flex-direction: row-reverse;
+}</style><script></script>
+<script>
+    window.addEventListener("load", function () {
+      console.log("loaded");
+      document?.querySelectorAll(".answergray").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document?.querySelectorAll(".show-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            ?.querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.remove("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            ?.querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.add("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      let event = new Event("click", {
+        bubbles: true,
+        cancelable: true,
+      });
+      document
+        ?.querySelectorAll(".openTextBoxController__showButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document?.querySelectorAll(".show-answer").forEach(function (ele) {
+              ele?.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        ?.querySelectorAll(".openTextBoxController__hideButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+              ele?.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        ?.querySelectorAll(".openTextBoxController__resetButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            document?.querySelectorAll("textArea").forEach(function (ele) {
+              ele.value = "";
+            });
+          });
+        });
+
+      document
+      ?.querySelectorAll('textarea')
+      .forEach(function (ele){
+        ele.defaultValue = ele.defaultValue.replace(/<!--.*?-->/g, '');
+      })
+        let checkButtonLabel = "check_button_label_placeHolder";
+        let hideButtonLabel = "hide_button_label_placeHolder";
+        document?.querySelectorAll(".check__button").forEach(function (ele) {
+        let answerBox = document.querySelector(".check__solution")
+        if (!answerBox.classList.contains("check__hidden")) {
+          answerBox.classList.add("check__hidden");
+          ele.innerText = checkButtonLabel;
+        }
+          ele.addEventListener("click", function (e) {
+            if (answerBox.classList.contains("check__hidden")) {
+              answerBox.classList.remove("check__hidden")
+              ele.innerText = hideButtonLabel;
+            } else {
+              answerBox.classList.add("check__hidden")
+              ele.innerText = checkButtonLabel;
+            }
+          })
+        })
+    });
+  </script>
+  </body></html>
