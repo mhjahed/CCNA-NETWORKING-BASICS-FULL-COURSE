@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — NetBasics Practice Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="7" cy="7" r="2.4"/><circle cx="17" cy="7" r="2.4"/><circle cx="12" cy="17" r="2.4"/><path d="M8.8 8.6l2.1 6M15.2 8.6l-2.1 6M9.4 7h5.2"/></svg></div>
+      <div><strong>NetBasics</strong><span>Practice Studio</span></div>
+    </div>
+    <nav class="nav">
+      <a class="active" href="index.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 14.5l4.2-4.2"/><path d="M4.8 18.5a9 9 0 1 1 14.4 0"/></svg>Dashboard</a>
+      <a href="learn.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16.5H6.5A2.5 2.5 0 0 0 4 22z"/><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></svg>Study Guide</a>
+      <a href="sims.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 8h9M19 8h1M4 16h3M13 16h7"/><circle cx="16" cy="8" r="2.2"/><circle cx="10" cy="16" r="2.2"/></svg>Simulators</a>
+      <a href="labs.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6l1.6 1.6L8 4.8M3.5 12l1.6 1.6L8 10.8M3.5 18l1.6 1.6L8 16.8"/><path d="M11 6.5h9.5M11 12.5h9.5M11 18.5h9.5"/></svg>Lab Guides</a>
+      <a href="quiz.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 0 1 5.1.8c0 1.7-2.4 2.1-2.4 3.4"/><path d="M12.2 16.7h.01"/></svg>Practice Quiz</a>
+    </nav>
+    <div class="side-foot">Built from your NetCad Academy <b>Networking Basics</b> resources — course notes, knowledge check and four Packet Tracer labs. Everything runs in your browser.</div>
+  </aside>
+
+  <div class="main">
+    <div class="mobile-nav">
+      <a class="active" href="index.html">Dashboard</a><a href="learn.html">Study Guide</a><a href="sims.html">Simulators</a><a href="labs.html">Lab Guides</a><a href="quiz.html">Quiz</a>
+    </div>
+    <header class="topbar">
+      <div class="crumb">NetBasics · <b>Dashboard</b></div>
+      <div class="top-meta" id="topMeta"></div>
+    </header>
+
+    <main class="content">
+      <section class="hero">
+        <div>
+          <div class="overline">NetCad Academy · Networking Basics</div>
+          <h1 class="title">Your course notes, turned into hands-on practice.</h1>
+          <p class="lede">This studio rebuilds everything in your downloaded resources as interactive practice: read the condensed study guide, run browser versions of the Packet Tracer labs, walk packets hop-by-hop, configure a home router, and test yourself against the same objectives.</p>
+          <div class="flex mt"><a class="btn primary" href="learn.html">Open the study guide</a><a class="btn" href="sims.html">Jump into the simulators</a></div>
+        </div>
+        <div class="ph"><img src="assets/hero-ethernet.jpg" alt="Hand plugging an ethernet cable into a switch"></div>
+      </section>
+
+      <div class="rule"></div>
+
+      <section class="grid g-12" style="align-items:start">
+        <div class="card">
+          <div class="card-h"><b class="sub">Knowledge check result</b><span class="chip ok">02 Aug 2026</span></div>
+          <div class="card-b">
+            <div class="row" style="gap:22px">
+              <div class="score-ring" style="--p:91"><b>91</b></div>
+              <div>
+                <div style="font-weight:600; letter-spacing:.14em; font-size:12px; color:var(--green)">MASTERED</div>
+                <div class="small">Learner · <b style="color:var(--ink)">Jahed SA</b></div>
+                <div class="small mt">Bands: <span class="chip" style="background:#f6d7d4;border-color:#f6d7d4;color:#a33">&lt;60</span>
+                <span class="chip warn">60–79</span> <span class="chip sky">80–89 Advanced</span> <span class="chip ok">≥90 Mastered</span></div>
+              </div>
+            </div>
+            <div class="rule" style="margin:18px 0 8px"></div>
+            <div class="small">Two modules landed in the <b>Advanced</b> band instead of Mastered. This dashboard points your practice time there first.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><b class="sub">Focus areas</b><span class="chip warn">practice first</span></div>
+          <div class="card-b">
+            <ul class="tasklist">
+              <li><span class="tick" style="border-color:var(--sky); background:var(--sky)"></span><span><b>Module 13 · Address Resolution — 86.</b> Re-run the <a href="sims.html#journey">Packet Journey</a> sim until you can predict every MAC change, then drill the <a href="quiz.html">Module 13 quiz</a>.</span></li>
+              <li><span class="tick" style="border-color:var(--sky); background:var(--sky)"></span><span><b>Module 5 · Communication Principles — 89.</b> Review encapsulation &amp; PDU names in the <a href="learn.html#m5">study guide</a>, then watch the journey sim and name each PDU type.</span></li>
+              <li><span class="tick" style="border-color:var(--green); background:var(--green)"></span><span><b>Everything else is Mastered.</b> Keep it sharp with the mixed practice quiz and the router lab scenarios.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt2">
+        <div class="overline">All 17 modules</div>
+        <h2 class="sec">Your knowledge check, module by module</h2>
+        <div class="card mt" style="margin-top:12px">
+          <div class="card-b" style="padding:8px 20px">
+            <div class="scoreline" style="border-bottom:1px solid var(--line)"><span class="small" style="letter-spacing:.12em;text-transform:uppercase">Module</span><span class="small" style="letter-spacing:.12em;text-transform:uppercase">Progress</span><b class="small" style="letter-spacing:.12em;text-transform:uppercase">Score</b><span class="small" style="letter-spacing:.12em;text-transform:uppercase">Band</span></div>
+            <div class="scoreline"><span>1 · Communication in a Connected World</span><span class="bar"><i style="width:92%"></i></span><b>92</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>2 · Network Components, Types, and Connections</span><span class="bar"><i style="width:93%"></i></span><b>93</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>3 · Wireless and Mobile Networks</span><span class="bar"><i style="width:92%"></i></span><b>92</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>4 · Build a Home Network</span><span class="bar"><i style="width:92%"></i></span><b>92</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>5 · Communication Principles</span><span class="bar"><i class="adv" style="width:89%"></i></span><b>89</b><span class="tag-advanced">Advanced</span></div>
+            <div class="scoreline"><span>6 · Network Media</span><span class="bar"><i style="width:95%"></i></span><b>95</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>7 · The Access Layer</span><span class="bar"><i style="width:92%"></i></span><b>92</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>8 · The Internet Protocol</span><span class="bar"><i style="width:92%"></i></span><b>92</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>9 · IPv4 Addressing</span><span class="bar"><i style="width:90%"></i></span><b>90</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>10 · IPv6 Addressing</span><span class="bar"><i style="width:91%"></i></span><b>91</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>11 · Dynamic Addressing with DHCP</span><span class="bar"><i style="width:93%"></i></span><b>93</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>12 · Gateways to Other Networks</span><span class="bar"><i style="width:92%"></i></span><b>92</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>13 · Address Resolution</span><span class="bar"><i class="adv" style="width:86%"></i></span><b>86</b><span class="tag-advanced">Advanced</span></div>
+            <div class="scoreline"><span>14 · Routing Between Networks</span><span class="bar"><i style="width:90%"></i></span><b>90</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>15 · Transport Layer</span><span class="bar"><i style="width:94%"></i></span><b>94</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>16 · Application Layer Services</span><span class="bar"><i style="width:91%"></i></span><b>91</b><span class="tag-mastered">Mastered</span></div>
+            <div class="scoreline"><span>17 · Network Testing Utilities</span><span class="bar"><i style="width:95%"></i></span><b>95</b><span class="tag-mastered">Mastered</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt2 grid g-21" style="align-items:start">
+        <div class="card">
+          <div class="card-h"><b class="sub">Practice stations</b><span class="chip acc">browser simulations</span></div>
+          <div class="card-b">
+            <ul class="tasklist">
+              <li><span class="tick" style="border-radius:6px;border-color:var(--line-2)"></span><span><b>Bits &amp; ASCII</b> — type characters, watch them become bits, like the Module 1 activity. <a href="sims.html#ascii">Open</a></span></li>
+              <li><span class="tick" style="border-radius:6px;border-color:var(--line-2)"></span><span><b>Packet Journey</b> — the 13.1.3 lab as an animation: MAC vs IP at every hop. <a href="sims.html#journey">Open</a></span></li>
+              <li><span class="tick" style="border-radius:6px;border-color:var(--line-2)"></span><span><b>Home Router Lab</b> — configure the wireless router GUI, DHCP, SSID &amp; WPA2, with auto-checked objectives from both labs. <a href="sims.html#router">Open</a></span></li>
+              <li><span class="tick" style="border-radius:6px;border-color:var(--line-2)"></span><span><b>NAT Explorer</b> — watch private sources get translated at the router, with a live NAT table. <a href="sims.html#nat">Open</a></span></li>
+              <li><span class="tick" style="border-radius:6px;border-color:var(--line-2)"></span><span><b>Testing Toolbox</b> — a simulated console: ipconfig, ping, tracert, nslookup, arp -a. <a href="sims.html#tools">Open</a></span></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-h"><b class="sub">Packet Tracer lab guides</b></div>
+            <div class="card-b">
+              <ul class="tasklist">
+                <li><span class="tick" style="border-radius:6px;border-color:var(--line-2)"></span><span>Configure a Wireless Router &amp; Clients <a href="labs.html#lab-wireless">→</a></span></li>
+                <li><span class="tick" style="border-radius:6px;border-color:var(--line-2)"></span><span>Configure DHCP on a Wireless Router <a href="labs.html#lab-dhcp">→</a></span></li>
+                <li><span class="tick" style="border-radius:6px;border-color:var(--line-2)"></span><span>Identify MAC &amp; IP Addresses <a href="labs.html#lab-macip">→</a></span></li>
+                <li><span class="tick" style="border-radius:6px;border-color:var(--line-2)"></span><span>Examine NAT on a Wireless Router <a href="labs.html#lab-nat">→</a></span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="simnote mt">Workflow that works: read the module notes → play with the matching simulator → tick through the lab guide → lock it in with the quiz.</div>
+        </div>
+      </section>
+
+      <section class="mt2">
+        <div class="overline">How to use this site</div>
+        <div class="grid g3">
+          <div><h3 class="sub">1 · Read</h3><p class="small mt" style="line-height:1.7">The study guide condenses all 17 modules of your course into key ideas and terms, each linked to the simulator that demonstrates it.</p></div>
+          <div><h3 class="sub">2 · Do</h3><p class="small mt" style="line-height:1.7">The simulators recreate the Packet Tracer activities in your browser — configure the router, lease DHCP addresses, watch NAT and ARP behave.</p></div>
+          <div><h3 class="sub">3 · Verify</h3><p class="small mt" style="line-height:1.7">Lab guides carry checklists and model answers; the quiz reports against the same module bands as your knowledge check.</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<script src="js/data.js"></script>
+<script src="js/shared.js"></script>
+<script>NB.meta();</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3ef49a38ca59cba',t:'MTc5MDA1ODkwNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
