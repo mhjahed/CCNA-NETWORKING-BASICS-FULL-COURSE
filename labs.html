@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab Guides — NetBasics Practice Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="7" cy="7" r="2.4"/><circle cx="17" cy="7" r="2.4"/><circle cx="12" cy="17" r="2.4"/><path d="M8.8 8.6l2.1 6M15.2 8.6l-2.1 6M9.4 7h5.2"/></svg></div>
+      <div><strong>NetBasics</strong><span>Practice Studio</span></div>
+    </div>
+    <nav class="nav">
+      <a href="index.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 14.5l4.2-4.2"/><path d="M4.8 18.5a9 9 0 1 1 14.4 0"/></svg>Dashboard</a>
+      <a href="learn.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16.5H6.5A2.5 2.5 0 0 0 4 22z"/><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></svg>Study Guide</a>
+      <a href="sims.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 8h9M19 8h1M4 16h3M13 16h7"/><circle cx="16" cy="8" r="2.2"/><circle cx="10" cy="16" r="2.2"/></svg>Simulators</a>
+      <a class="active" href="labs.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6l1.6 1.6L8 4.8M3.5 12l1.6 1.6L8 10.8M3.5 18l1.6 1.6L8 16.8"/><path d="M11 6.5h9.5M11 12.5h9.5M11 18.5h9.5"/></svg>Lab Guides</a>
+      <a href="quiz.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 0 1 5.1.8c0 1.7-2.4 2.1-2.4 3.4"/><path d="M12.2 16.7h.01"/></svg>Practice Quiz</a>
+    </nav>
+    <div class="side-foot">Your four Packet Tracer activities, rewritten as checklists with model answers. Rehearse each one in the browser simulator before opening Packet Tracer.</div>
+  </aside>
+
+  <div class="main">
+    <div class="mobile-nav">
+      <a href="index.html">Dashboard</a><a href="learn.html">Study Guide</a><a href="sims.html">Simulators</a><a class="active" href="labs.html">Lab Guides</a><a href="quiz.html">Quiz</a>
+    </div>
+    <header class="topbar">
+      <div class="crumb">NetBasics · <b>Lab Guides</b></div>
+      <div class="top-meta" id="topMeta"></div>
+    </header>
+
+    <main class="content">
+      <div class="overline">Packet Tracer activities · rehearsed</div>
+      <h1 class="title">Lab guides</h1>
+      <p class="lede">Each guide keeps the exact objectives and values from your downloaded labs, with a tickable checklist (saved in your browser) and model answers to check yourself against. Rehearse first in the matching simulator.</p>
+
+      <!-- ============ LAB 1 ============ -->
+      <section class="card mt2" id="lab-wireless">
+        <div class="card-h"><b class="sub">Lab 1 · Configure a Wireless Router and Clients</b><span class="flex"><a class="btn sm" href="sims.html#router">Rehearse in simulator</a><span class="chip acc">PT activity</span></span></div>
+        <div class="card-b">
+          <p class="small mb"><b>Scenario:</b> help Natsumi connect her new home — coax + splitter + modem + TV, two wired PCs, one wireless laptop. Configure the router GUI (defaults admin/admin), a secure WLAN, DHCP clients, then verify internet via <code>skillsforall.srv</code>.</p>
+          <ul class="labcheck" data-lab="lab-wireless">
+            <li><input type="checkbox"><span><b>Part 1 ·</b> Coaxial: Splitter Coaxial1 → Cable Modem Port 0; Splitter Coaxial2 → TV Port 0; turn the TV ON (picture appears).</span></li>
+            <li><input type="checkbox"><span><b>Part 1 ·</b> Copper straight-through: Modem Port 1 → router <b>Internet</b> port; Office PC FE0 → router GE1; Bedroom PC → GE2.</span></li>
+            <li><input type="checkbox"><span><b>Part 2 ·</b> Office PC → IP Configuration → DHCP; note the default gateway (the router, 192.168.0.1); browse to it and log in <code>admin / admin</code>.</span></li>
+            <li><input type="checkbox"><span><b>Part 2 ·</b> Setup tab: Maximum Number of Users = <b>10</b> → Save Settings (reconnect if dropped).</span></li>
+            <li><input type="checkbox"><span><b>Part 2 ·</b> Administration tab: new password <code>MyPassword1!</code> → Save → re-login with the new password.</span></li>
+            <li><input type="checkbox"><span><b>Part 2 ·</b> Wireless tab: Enable 2.4 GHz, SSID <b>MyHome</b> → Save. Wireless Security: <b>WPA2 Personal</b>, passphrase <code>MyPassPhrase1!</code> → Save.</span></li>
+            <li><input type="checkbox"><span><b>Part 3 ·</b> Laptop → PC Wireless → Connect to MyHome with the passphrase; Link Information shows success; verify a 192.168.0.x lease.</span></li>
+            <li><input type="checkbox"><span><b>Part 3 ·</b> Browse <code>skillsforall.srv</code> from Laptop, Office PC and (after DHCP) Bedroom PC — all load.</span></li>
+          </ul>
+          <div class="progress mt"><i></i></div>
+          <details class="mt"><summary style="cursor:pointer;font-weight:600;font-size:13px">Model answers &amp; gotchas</summary>
+            <ul style="margin:10px 0 0 18px;color:var(--ink-2)">
+              <li>Default gateway / router address: <b>192.168.0.1</b>; DHCP clients receive 192.168.0.100 upwards.</li>
+              <li>After saving the router IP / DHCP changes you can lose the GUI session — toggle the PC Static→DHCP to renew, then re-open the browser.</li>
+              <li>Default passwords must be changed immediately in real life; they are public knowledge (including to threat actors).</li>
+              <li>WPA2 Personal is the strongest option on this router; SSID case and passphrase capitalization must match exactly.</li>
+            </ul>
+          </details>
+        </div>
+      </section>
+
+      <!-- ============ LAB 2 ============ -->
+      <section class="card mt2" id="lab-dhcp">
+        <div class="card-h"><b class="sub">Lab 2 · Configure DHCP on a Wireless Router (11.2.3)</b><span class="flex"><a class="btn sm" href="sims.html#router">Rehearse in simulator</a><span class="chip acc">PT activity</span></span></div>
+        <div class="card-b">
+          <p class="small mb"><b>Scenario:</b> three PCs must obtain addresses automatically. Observe defaults, move the router to 192.168.5.1, reshape the pool, verify with ipconfig and pings.</p>
+          <ul class="labcheck" data-lab="lab-dhcp">
+            <li><input type="checkbox"><span><b>Part 1 ·</b> Add 3 PCs; connect each with straight-through cables to Ethernet ports; wait for green links.</span></li>
+            <li><input type="checkbox"><span><b>Part 2 ·</b> PC0 → DHCP; record the default gateway (question answer: <b>192.168.0.1</b>); browse to it, admin/admin; note DHCP enabled, start 192.168.0.100.</span></li>
+            <li><input type="checkbox"><span><b>Part 3 ·</b> Router IP → <b>192.168.5.1</b> → Save (error page is expected); renew PC0 (Static→DHCP); re-open GUI at 192.168.5.1.</span></li>
+            <li><input type="checkbox"><span><b>Part 4 ·</b> Start IP → <b>192.168.5.126</b>; Max Users → <b>75</b> → Save; renew PC0; <code>ipconfig</code> (question answer: PC0 = <b>192.168.5.126</b>).</span></li>
+            <li><input type="checkbox"><span><b>Part 5 ·</b> Enable DHCP on PC1 (= <b>.127</b>) and PC2 (= <b>.128</b>).</span></li>
+            <li><input type="checkbox"><span><b>Part 6 ·</b> From PC2: <code>ping 192.168.5.1</code>, <code>ping 192.168.5.126</code>, <code>ping 192.168.5.127</code> — all successful.</span></li>
+          </ul>
+          <div class="progress mt"><i></i></div>
+          <details class="mt"><summary style="cursor:pointer;font-weight:600;font-size:13px">Model answers &amp; gotchas</summary>
+            <ul style="margin:10px 0 0 18px;color:var(--ink-2)">
+              <li>Changing the router IP makes the DHCP start address auto-follow to the same network (then you edit it to .126).</li>
+              <li>Leases are sequential from the start address: .126, .127, .128 for PC0–PC2.</li>
+              <li>A client only sees the new pool after renewing its lease.</li>
+            </ul>
+          </details>
+        </div>
+      </section>
+
+      <!-- ============ LAB 3 ============ -->
+      <section class="card mt2" id="lab-macip">
+        <div class="card-h"><b class="sub">Lab 3 · Identify MAC and IP Addresses (13.1.3)</b><span class="flex"><a class="btn sm" href="sims.html#journey">Rehearse in simulator</a><span class="chip acc">PT activity</span></span></div>
+        <div class="card-b">
+          <p class="small mb"><b>Scenario:</b> in Simulation mode, capture PDUs hop-by-hop for a local ping (172.16.31.3 → 172.16.31.2) and a remote ping (→ 10.10.10.2), recording Src/Dst MAC + Src/Dst IPv4 at every device, inbound and outbound.</p>
+          <ul class="labcheck" data-lab="lab-macip">
+            <li><input type="checkbox"><span><b>Part 1 ·</b> Realtime: <code>ping 172.16.31.2</code> from 172.16.31.3 works; then Simulation mode and repeat; open the PDU.</span></li>
+            <li><input type="checkbox"><span><b>Part 1 ·</b> Record step 1: Src MAC 0060.7036.2849, Dst MAC 000C.85CC.1DA7, Src IP 172.16.31.3, Dst IP 172.16.31.2; Capture/Forward until delivered; inbound PDU unchanged.</span></li>
+            <li><input type="checkbox"><span><b>Part 2 ·</b> <code>ping 10.10.10.2</code>; first PDU’s Dst MAC = <b>00D0.BA8E.741A — the router’s G0/0 interface</b> (the gateway), while Dst IP stays 10.10.10.2.</span></li>
+            <li><input type="checkbox"><span><b>Part 2 ·</b> Capture/Forward through the router; record both inbound and outbound PDUs at the router — MACs change, IPs don’t.</span></li>
+            <li><input type="checkbox"><span><b>Part 2 ·</b> Repeat for the echo reply from 10.10.10.2; complete the table; answer the 15 reflection questions.</span></li>
+          </ul>
+          <div class="progress mt"><i></i></div>
+          <details class="mt"><summary style="cursor:pointer;font-weight:600;font-size:13px">Reflection model answers</summary>
+            <ul style="margin:10px 0 0 18px;color:var(--ink-2)">
+              <li>1) Copper straight-through cables and wireless (AP) links. 2) No — media never change PDU handling. 3–4) The AP just converts the frame to radio; no addressing changes. 5) Layer 2. 6) Cables &amp; APs: Layers 1–2.</li>
+              <li>7) Destination MAC appears first in the header. 8) Red X = failed/dropped PDU; green check = successful. 9) MACs changed at the <b>router</b>. 10) 00D0.BA… = the router’s interfaces. 11) The others = end hosts (PCs, server).</li>
+              <li>12) IPv4 addresses never changed. 13) In the pong, source and destination swap. 14) A router must sit on a different network per interface to route between them. 15) 172.16.31.0/24 and 10.10.10.0/24.</li>
+            </ul>
+          </details>
+        </div>
+      </section>
+
+      <!-- ============ LAB 4 ============ -->
+      <section class="card mt2" id="lab-nat">
+        <div class="card-h"><b class="sub">Lab 4 · Examine NAT on a Wireless Router</b><span class="flex"><a class="btn sm" href="sims.html#nat">Rehearse in simulator</a><span class="chip acc">PT activity</span></span></div>
+        <div class="card-b">
+          <p class="small mb"><b>Scenario:</b> inspect the router’s public (ISP) address vs its private LAN, put 4 PCs on DHCP, then in Simulation mode watch periodic HTTP PDUs cross the router and compare inbound vs outbound headers.</p>
+          <ul class="labcheck" data-lab="lab-nat">
+            <li><input type="checkbox"><span><b>Part 1 ·</b> PC + DHCP; browse to the gateway (admin/admin); Status → Router → Internet connection IP. Question answer: <b>public</b> address.</span></li>
+            <li><input type="checkbox"><span><b>Part 2 ·</b> Status → Local Network: internal address + DHCP range. Question answer: <b>private</b> addresses.</span></li>
+            <li><input type="checkbox"><span><b>Part 3 ·</b> Add 3 more PCs, DHCP on all; <code>ipconfig /all</code> shows private addresses — these cannot cross the internet, so NAT must translate.</span></li>
+            <li><input type="checkbox"><span><b>Part 4 ·</b> Simulation mode; filter to TCP+HTTP; Complex PDU: HTTP, source port 1000, destination ciscolearn.nat.com, Periodic 120 s; Play.</span></li>
+            <li><input type="checkbox"><span><b>Part 5 ·</b> Open event envelopes; compare Inbound vs Outbound PDU tabs — the <b>SRC IP changes at the router</b> (private → public). Check Results.</span></li>
+          </ul>
+          <div class="progress mt"><i></i></div>
+          <details class="mt"><summary style="cursor:pointer;font-weight:600;font-size:13px">Model answers &amp; gotchas</summary>
+            <ul style="margin:10px 0 0 18px;color:var(--ink-2)">
+              <li>Internet-port address = public (ISP-assigned); LAN + DHCP pool = private (192.168.0.0/24).</li>
+              <li>Outgoing: source private IP:port is rewritten to the router’s public IP with a unique port; the reply to that port is translated back to the right PC — that mapping is the NAT table.</li>
+            </ul>
+          </details>
+        </div>
+      </section>
+
+      <div class="simnote mt2">Checklists are stored in this browser only. Re-open Packet Tracer afterwards and run the real activity — the steps will feel familiar, which is exactly the point.</div>
+    </main>
+  </div>
+</div>
+<script src="js/data.js"></script>
+<script src="js/shared.js"></script>
+<script>
+NB.meta();
+(function(){
+  const store = NB.get('nb_lab_checks', {});
+  document.querySelectorAll('.labcheck').forEach(ul => {
+    const key = ul.dataset.lab;
+    const boxes = ul.querySelectorAll('input');
+    const bar = ul.parentElement.querySelector('.progress i');
+    const apply = () => {
+      const on = [...boxes].map(b => b.checked);
+      store[key] = on; NB.set('nb_lab_checks', store);
+      const n = on.filter(Boolean).length;
+      bar.style.width = Math.round(n / boxes.length * 100) + '%';
+      [...ul.children].forEach((li, i) => li.classList.toggle('checked', on[i]));
+      NB.meta();
+    };
+    boxes.forEach((b, i) => { b.checked = !!(store[key] || [])[i]; b.addEventListener('change', apply); });
+    apply();
+  });
+})();
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3ef49afd8bb9cba',t:'MTc5MDA1ODkwOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
